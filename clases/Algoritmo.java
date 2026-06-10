@@ -24,4 +24,31 @@ public class Algoritmo {
     return true;
   }
 
+  public static String stringEnReversa(String texto) {
+    String textoReversa = "";
+    for (int i = texto.length() - 1; i >= 0; i--) {
+      textoReversa += texto.charAt(i);
+
+    }
+    return textoReversa;
+  }
+
+  public static boolean esPalindromo(String texto) {
+    String textoEnReversa = stringEnReversa(texto);
+    return texto.equalsIgnoreCase(textoEnReversa);
+  }
+
+  public static void secuenciaFizzBuzz(int numero) {
+    for (int i = 1; i <= numero; i++) {
+      if (i % 3 == 0 && i % 5 == 0) {
+        System.out.println("FizzBuzz");
+      } else if (i % 3 == 0) {
+        System.out.println("Fizz");
+      } else if (i % 5 == 0) {
+        System.out.println("Buzz");
+      } else {
+        System.out.println(i);
+      }
+    }
+  }
 }
